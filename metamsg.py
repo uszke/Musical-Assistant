@@ -1,6 +1,5 @@
 from mido import MetaMessage, Message, MidiFile, MidiTrack
 
-
 mid = MidiFile()
 track = MidiTrack()
 mid.tracks.append(track)
@@ -15,14 +14,12 @@ track.append(Message('note_off', note=65, velocity=127, time=240))
 
 mid.save('tests.mid')
 
-
 for i, track in enumerate(mid.tracks):
-	print('Track{}:{}'.format(i,track.name))
-	for msg in track:
-		#if msg == 'note=30, velocity=127, time=60':
-		#	print(msg)
-		#if msg.is_meta :
-			print(msg)
-
-
-
+    print('Track{}:{}'.format(i, track.name))
+    for msg in track:
+        # if msg == 'note=30, velocity=127, time=60':
+        #	print(msg)
+        # if msg.is_meta :
+        # print(msg.bytes())
+        # L = msg.bytes()
+        print(msg.bytes()[2:])

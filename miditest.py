@@ -10,4 +10,3 @@ track.append(Message('note_on', note=64, velocity=64, time=32))
 track.append(Message('note_off', note=64, velocity=127, time=45))
 
 mid.save('6.mid')
-
