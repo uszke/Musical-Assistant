@@ -1,5 +1,6 @@
 from mido import Message, MidiFile, MidiTrack
 
+
 mid = MidiFile(type=1)
 mid.type = 1
 track = MidiTrack()
